@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F2104" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -21,30 +21,81 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello there" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjc-6x-S2M">
-                                <rect key="frame" x="166" y="154" width="84" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvq-9b-0og">
-                                <rect key="frame" x="178" y="408" width="60" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvq-9b-0og">
+                                <rect key="frame" x="158" y="132.5" width="60" height="30"/>
                                 <state key="normal" title="Push me"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iuW-PT-mkk"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vfc-91-tQv">
+                                <rect key="frame" x="146.5" y="66" width="83.5" height="20.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello there" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjc-6x-S2M">
+                                        <rect key="frame" x="0.0" y="0.0" width="83.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="gjc-6x-S2M" firstAttribute="centerX" secondItem="vfc-91-tQv" secondAttribute="centerX" id="mdX-iH-n4N"/>
+                                </constraints>
+                            </stackView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hba-EP-sgo">
+                                <rect key="frame" x="137" y="537" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="pPp-gK-raO"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GLM-sm-BcN">
+                                <rect key="frame" x="137.5" y="170" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="fOX-PW-UTw"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vch-hx-BCd">
+                                <rect key="frame" x="137.5" y="208" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="z9Z-3A-Qh4"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hba-EP-sgo" secondAttribute="bottom" constant="100" id="2ov-U1-8sd"/>
+                            <constraint firstItem="hvq-9b-0og" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="397-eL-1tA"/>
+                            <constraint firstItem="vfc-91-tQv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="46" id="7Nu-RS-bSS"/>
+                            <constraint firstItem="GLM-sm-BcN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EhG-z5-PC7"/>
+                            <constraint firstItem="hvq-9b-0og" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HJC-zT-dmQ"/>
+                            <constraint firstItem="vfc-91-tQv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NKj-Xu-XZb"/>
+                            <constraint firstItem="GLM-sm-BcN" firstAttribute="top" secondItem="hvq-9b-0og" secondAttribute="bottom" constant="7.5" id="Nw5-37-0ed"/>
+                            <constraint firstItem="hba-EP-sgo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b4H-0s-1Cy"/>
+                            <constraint firstItem="Vch-hx-BCd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d6i-Vd-w0L"/>
+                            <constraint firstItem="hba-EP-sgo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fXg-Ih-yNg"/>
+                            <constraint firstItem="hvq-9b-0og" firstAttribute="top" secondItem="vfc-91-tQv" secondAttribute="bottom" constant="46.5" id="h3a-G1-Woc"/>
+                            <constraint firstItem="Vch-hx-BCd" firstAttribute="top" secondItem="GLM-sm-BcN" secondAttribute="bottom" constant="8" id="j9A-gK-MON"/>
+                            <constraint firstItem="hba-EP-sgo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oTm-6b-uAD"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="label1" destination="gjc-6x-S2M" id="a1J-kW-o7S"/>
+                        <outlet property="text1" destination="GLM-sm-BcN" id="2Vo-R9-V7E"/>
+                        <outlet property="text2" destination="Vch-hx-BCd" id="UZR-Y8-n6e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-1148" y="33"/>
         </scene>
     </scenes>
 </document>
